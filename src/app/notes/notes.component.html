@@ -1,0 +1,8 @@
+<p>notes works!</p>
+
+<div *ngFor="let note of notes">
+  <h2>{{ note.title }}</h2>
+  <p>{{ note.body }}</p>
+</div>
+
+<app-note-form (onSave)="getNotes()"></app-note-form>

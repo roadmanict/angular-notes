@@ -1,0 +1,11 @@
+<h3>Note form</h3>
+<form (ngSubmit)="saveForm()">
+  <p>
+    Title:
+    <input type="text" id="title" name="title" [(ngModel)]="noteForm.title" />
+  </p>
+  <p>
+    <textarea id="body" name="body" [(ngModel)]="noteForm.body"></textarea>
+  </p>
+  <input type="submit" />
+</form>
