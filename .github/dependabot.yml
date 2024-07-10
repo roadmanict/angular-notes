@@ -6,6 +6,7 @@ updates:
     directory: "/"
     commit-message:
       prefix: "deps"
+    open-pull-requests-limit: 10
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -15,3 +16,12 @@ updates:
     open-pull-requests-limit: 10
     target-branch: "main"
     rebase-strategy: "auto"
+    groups:
+      angular:
+        applies-to: version-updates
+        patterns:
+          - "@angular*"
+        update-types:
+          - "minor"
+          - "patch"
+          - "major"
