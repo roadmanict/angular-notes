@@ -1,8 +1,11 @@
 <p>notes works!</p>
 
 <div *ngFor="let note of notes">
-  <h2>{{ note.title }}</h2>
+  <em>
+    <a routerLink="['/notes', node.id]">{{ note.title }}</a>
+  </em>
   <p>{{ note.body }}</p>
 </div>
 
+<h3>Create new note</h3>
 <app-note-form (onSave)="getNotes()"></app-note-form>
